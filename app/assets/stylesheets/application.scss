@@ -18,5 +18,15 @@
 @import "bootstrap";
 
 body {
-background-color: #aaa;
+// background-color: #aaa;
+background-color: #ffffff;
+}
+
+#navbar-signup {
+  margin-top: 1em;
+}
+
+#navbar-signup > a {
+  text-decoration: none;
+  color: #9d9d9d;
 }
