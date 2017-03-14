@@ -33,13 +33,14 @@
     <h4>Categories</h4>
     <% @categories.each do |category| %>
     <span class="label label-success"><%= category.name %></span>
+
     <% end %>
 
     <!-- Status -->
     <h4>Status</h4>
     <p><%= !@event.active ? ("<del>Unpiublished</del>").html_safe : "Published" %></p>
+    <%= link_to "Back", events_path, class: "btn btn-default" %>
+
   </div>
 
 </div>
-
-<%= link_to "Back", events_path, class: "btn btn-default" %>
