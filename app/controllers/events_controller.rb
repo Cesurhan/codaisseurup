@@ -14,8 +14,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = current_user.events.build(events_params)
-
+    @event = current_user.events.build(event_params)
 
   if @event.save
     redirect_to @event, notice: "Room successfully created"
@@ -43,3 +42,6 @@ end
 
 def event_params
   params.require(:event).permit(:name, :description, :location, :price, :capacity, :includes_food, :includes_drinks, :starts_at, :ends_at, :active)
+end
+
+end
