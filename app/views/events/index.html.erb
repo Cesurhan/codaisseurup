@@ -1,5 +1,9 @@
-<h2>Your Events</h2>
-
+<h2>Your Events
+  <span class="badge"><%= @events.count%></span>
+</h2>
+<hr/>
+<%= link_to "Add new event", new_event_path, class: "btn btn-default"%>
+<br/><br/>
 <div class="row">
   <% @events.each do |event| %>
   <div class="col-md-3">
@@ -23,5 +27,3 @@
   </div>
   <% end %>
 </div>
-
-<%= link_to "Add new event", new_event_path, class: "btn btn-success" %>

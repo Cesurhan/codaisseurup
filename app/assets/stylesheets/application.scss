@@ -30,3 +30,15 @@ background-color: #ffffff;
   text-decoration: none;
   color: #9d9d9d;
 }
+
+.panel-primary > .panel-heading {
+  background-color: #222222;
+}
+
+.panel-primary {
+  border-color: #222222;
+}
+
+.panel-heading > h4 {
+  color:#887f76;
+}
