@@ -1,0 +1,2 @@
+class AddDefaultPriceToRoom < ApplicationRecord
+end
