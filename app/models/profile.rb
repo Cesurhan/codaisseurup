@@ -4,6 +4,6 @@ class Profile < ApplicationRecord
   validates :bio, presence: true
 
   def full_name
-    "#{first_name}#{last_name}"
+    "#{first_name} #{last_name}"
   end
 end
