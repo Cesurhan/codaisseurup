@@ -65,3 +65,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use Devise for authentication
 gem 'devise', '~> 4.2'
+
+# Factory Girl
+gem 'factory_girl_rails', '4.7.0'
+# Faker
+gem 'faker', '1.6.6'
