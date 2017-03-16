@@ -23,7 +23,7 @@ class EventsController < ApplicationController
         @event.photos.create(image: image)
       end
 
-      redirect_to edit_event_path, notice: 'Room successfully created'
+      redirect_to events_path, notice: 'Event successfully created'
     else
       render :new
     end
