@@ -73,3 +73,6 @@ gem 'faker', '1.6.6'
 
 #  Rails 12factor
 gem 'rails_12factor', group: :production
+
+# Carrierwave
+gem 'carrierwave', '0.11.2'
