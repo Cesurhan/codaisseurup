@@ -41,6 +41,12 @@
     <p><%= !@event.active ? ("<del>Unpiublished</del>").html_safe : "Published" %></p>
     <%= link_to "Back", events_path, class: "btn btn-default" %>
 
+    <!-- Photos -->
+    <h4>Photos</h4>
+    <% @event.photos.each do |photo| %>
+    <%= image_tag photo.image %>
+    <% end %>
+
   </div>
 
 </div>
