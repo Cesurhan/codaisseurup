@@ -76,3 +76,6 @@ gem 'rails_12factor', group: :production
 
 # Carrierwave
 gem 'carrierwave', '0.11.2'
+
+# Cloudinary
+gem 'cloudinary', '1.2.3'
