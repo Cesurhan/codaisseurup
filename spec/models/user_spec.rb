@@ -1,3 +1,4 @@
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -25,7 +26,7 @@ RSpec.describe User, type: :model do
     let!(:event) { create :event, user: host_user }
     let!(:registration) { create :registration, event: event, user: guest_user }
 
-    it 'has bookings' do
+    it 'has registrations' do
       expect(guest_user.registered_events).to include(event)
     end
   end

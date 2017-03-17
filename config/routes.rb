@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
-  resources :categories
   root to: 'pages#home'
-  get 'about' => 'pages#about'
 
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
   resources :users, only: [:show]
-  resources :events
-  resources :profiles, only: [:new, :edit, :create, :update]
-  resources :photos
+
   resources :events do
-    resources :bookings, only: [:create]
+    resources :registrations, only: [:create]
   end
+
+  resources :categories
+  resources :profiles, only: [:new, :edit, :create, :update]
+
+  get 'about' => 'pages#about'
+
+  resources :photos
 end
