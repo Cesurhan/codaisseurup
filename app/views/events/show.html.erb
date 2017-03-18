@@ -1,3 +1,13 @@
+<% if current_user != @event.user %>
+<div class="panel panel-primary">
+  <div class="panel-heading">Register</div>
+
+  <div class="panel-body">
+    <%= render 'registrations/form' %>
+  </div>
+</div>
+<% end %>
+
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h4><%= @event.name %></h4>
@@ -33,17 +43,11 @@
     <h4>Categories</h4>
     <% @categories.each do |category| %>
     <span class="label label-success"><%= category.name %></span>
-
     <% end %>
-
-    <!-- Status -->
-    <h4>Status</h4>
-    <p><%= !@event.active ? ("<del>Unpiublished</del>").html_safe : "Published" %></p>
-    <%= link_to "Back", events_path, class: "btn btn-default" %>
 
     <!-- Photos -->
     <h4>Photos</h4>
-    <% @event.photos.each do |photo| %>
+    <% @photos.each do |photo| %>
     <div class="panel panel-default">
       <div class="panel-heading">
         <%= image_tag photo.image.thumbnail %>
@@ -51,6 +55,11 @@
     </div>
     <% end %>
 
+    <!-- Status -->
+    <h4>Status</h4>
+    <p><%= !@event.active ? ("<del>Unpiublished</del>").html_safe : "Published" %></p>
   </div>
 
 </div>
+
+<%= link_to "Back", events_path, class: "btn btn-default" %>
